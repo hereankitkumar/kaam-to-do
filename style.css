@@ -1,0 +1,175 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content:center  ;
+    height: 100vh;
+    background:linear-gradient(135deg, #1f1f1f,#323036);
+    color: #e0e0e0;
+}
+.container{
+    width: 500px;
+    min-height: 200px;
+    background: linear-gradient(135deg, #333,#555);
+    border-radius: 12px;
+    padding: 30px;
+    margin: 10px;
+}
+.todo-font{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 35px;
+    font-weight: 600;   
+    position: relative;
+}
+img{
+    width: 50px;
+}
+.todo-font img{
+    width: 50px;
+    margin-left: 12px;
+    transition: rotate 0.3s ease-in-out;
+}
+.todo-font img:hover{
+    rotate: -30deg ;
+}
+
+.todo-font button{
+    position: absolute;
+    right: 0;
+    border: 0px;
+    border-radius: 40px;
+    width: 70px;
+    height: 40px;
+    font-size: 15px;
+    color: white;
+    background: linear-gradient(45deg, #444, #666);
+    transition: background-color 0.3s, transform 0.3s
+}
+.todo-font button:hover {
+    background:  linear-gradient(135deg, #555, #777);
+    transform: scale(1.05);
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2d2d2d;
+    margin-top: 30px;
+    border: 0px;
+    border-radius: 40px;
+    padding: 0px;
+    position: relative;
+}
+.search input{
+    width: 80%;
+    border: 0px;
+    outline: 0px;
+    font-size: 18px;
+    padding: 13px 8px;
+    padding-left: 20px;
+    border-radius: 40px;
+    background-color: transparent;
+    color: #e0e0e0;
+}
+.search button{
+    position: absolute;
+    right: 0;
+    border: 0px;
+    outline: 0px;
+    font-size: 20px;
+    border-radius: 40px;
+    padding: 10px 5px;
+    width: 100px;
+    height: 50px;
+    margin: 0px;
+    background: linear-gradient(45deg, #444, #666);
+    color: #e0e0e0;
+    font-weight: 500;
+    transition: background 5s ease-in-out;
+    transition: height 0.2s ease-in-out;
+    transition: width 0.2s ease-in-out;
+    cursor: url('path/to/your-cursor.cur'), 
+}
+.search button:hover {
+    background: linear-gradient(135deg, #555, #777);
+    background-position: right center;
+    height:60px;
+    width:110px;
+}
+ul {
+    margin-top: 30px;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+ul li{
+    list-style: none;
+    font-size: 16px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #e0e0e0;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border: 50%;
+    background-image: url(images/circle-empty-inside-and-with-border.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+ul::-webkit-scrollbar {
+    width: 8px; /* Width of the scrollbar */
+}
+
+/* Style the scrollbar track */
+ul::-webkit-scrollbar-track {
+    background: #333; /* Background color of the scrollbar track */
+    border-radius: 10px; /* Rounded corners for the track */
+}
+
+/* Style the scrollbar thumb */
+ul::-webkit-scrollbar-thumb {
+    background: #555; /* Background color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the thumb */
+}
+
+/* Style the scrollbar thumb on hover */
+ul::-webkit-scrollbar-thumb:hover {
+    background: #777;
+}
+ul li.checked{
+    color: #bcbcbc;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(images/right-tick-inside-a-circle.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #ffffff;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%; 
+    transition: background 0.2s ease-in-out;
+}
+ul li span:hover{
+    background: linear-gradient(45deg, #212121, #949494);
+}
